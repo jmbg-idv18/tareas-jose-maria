@@ -1,0 +1,34 @@
+def main():
+    ej=int(input("introduce el numero de ejercicio (1)invertir lista,(2)palindromo"))
+    if(ej==1):
+      Invertir()
+    if(ej==2):
+      palindromo()
+
+
+def Invertir():
+  palabra=str(input("introducir un string para invertirlo"))
+  invertido=[]
+  print(palabra)
+  for x in palabra:
+    invertido.insert(0,x)
+  print(str(invertido))
+
+def palindromo():
+  palabra=str(input("introducir un string para ver si es un palindromo"))
+  invertido=[]
+  n=0
+  m=0
+  for x in palabra:
+    m+=1
+    invertido.insert(0,x)
+
+  for x in m:
+    if(palabra[x]!=invertido[x]):
+      n+=1
+  if (n==m):
+    print(palabra+" es palindromo")
+  else:
+    print(palabra+" no es palindromo")
+
+main()
